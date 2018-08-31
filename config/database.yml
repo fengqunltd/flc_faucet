@@ -1,0 +1,25 @@
+
+  #数据库配置
+
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root  #数据库登录用户名
+  password: 123456  #数据库登录密码，根据安装mysql时的填写
+  host: localhost  #数据库url
+
+development:
+  <<: *default
+  database: flc_faucet_dev
+
+test:
+  <<: *default
+  database: flc_faucet_test
+
+production:
+  <<: *default
+  database: flc_faucet
+
+
+# 修改后需要初始化数据库  rake db:create; rake db:migrate; rake db:seed

@@ -1,0 +1,18 @@
+<%= render partial: 'jsonp.js' %>
+JSONP.init({
+  callbackName: 'callback'
+});
+(function () {
+  window.FLCW = window.FLCW || {};
+  window.FLCW.referrer = "<%= cookies[:_referrer_] %>";
+  (function (FLCW, window, undefined_) {
+    FLCW.action = function (name, value) {
+      JSONP.get('<%= @jsonp_url %>/action.js', {name: name, value: value}, function (response) {
+        console.log(response);
+      });
+    }
+//    FLCW.current_user = function (callback) {
+//      JSONP.get('<%= @jsonp_url %>/get_current_user.js', null, callback);
+//    }
+  })(FLCW, window);
+}).call(this);

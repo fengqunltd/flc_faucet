@@ -1,0 +1,19 @@
+cli_wallet_connection: ws://47.74.41.30:8090 #钱包开放的websocketurl
+registrar_account: my-account #提供注册的推荐人用户名，本例子为在比特股环境搭建》已创建且升级为会员
+referrer_percent: 50
+refcode_prefix: F01
+
+default_url: 47.74.21.162  #水龙头对外访问的IP
+default_port: 3080
+
+exception_notification:
+  sender_address: ruier09@qq.com
+  exception_recipients: 909022150@qq.com
+
+smtp:
+  address: smtp.qq.com
+  user_name: ruier09@qq.com
+  password: Tjflw@86918
+
+#start:
+#rails server -p 3080 -b 0.0.0.0
