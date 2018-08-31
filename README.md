@@ -2,7 +2,7 @@
 
 ## Build toolkit and cli_wallet
 
-Start with flashchain toolkit installation https://github.com/flashcoin/flashcoin-2. Follow instructions from README file.
+Start with flashchain toolkit installation https://github.com/fengqunltd/flc_core . Follow instructions from README file.
 
 I recommend to launch 4 witness nodes for redundancy, find shell script example that launches the nodes in config/deploy/wns.sh.
 
@@ -21,7 +21,7 @@ After you start cli_wallet, create password and import faucet account key, the f
 
 ## Build web wallet
 
-Find source code and building instructions here https://github.com/flashcoin/flashcoin-2-ui.
+Find source code and building instructions here https://github.com/fengqunltd/flc_ui.
 Before compiling it, edit SettingsStore.jsx, and put your values for connection and faucet_address.
 If you able to build it successfully, web/dist should contain several html, js and css files.
 
